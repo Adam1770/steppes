@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>{{ .title }}</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<style>
+		:root {
+			--baseColor: #606468;
+			--iconFill: #8d8d8d;
+			--htmlFontSize: 100%;
+			--bodyBackgroundColor: #141625;
+			--bodyColor: var(--baseColor);
+			--bodyFontFamily: "Open Sans";
+			--bodyFontFamilyFallback: sans-serif;
+			--bodyFontSize: 0.875rem;
+			--bodyFontWeight: 400;
+			--bodyLineHeight: 1.5;
+			--anchorColor: #eee;
+			--formGap: 0.875rem;
+			--loginBorderRadus: 0.25rem;
+			--loginColor: #eee;
+			--loginInputBackgroundColor: #3b4148;
+			--loginInputHoverBackgroundColor: #434a52;
+			--loginLabelBackgroundColor: #363b41;
+			--loginSubmitBackgroundColor: #ca4a79;
+			--loginSubmitColor: #eee;
+			--loginSubmitHoverBackgroundColor: #e2226c
+		}
+
+		* {
+			-webkit-box-sizing: inherit;
+			box-sizing: inherit
+		}
+
+		html {
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			font-size: 100%;
+			font-size: var(--htmlFontSize)
+		}
+
+		body {
+			background-color: #2c3338;
+			background-color: var(--bodyBackgroundColor);
+			color: #606468;
+			color: var(--bodyColor);
+			font-family: "Open Sans", sans-serif;
+			font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+			font-size: .875rem;
+			font-size: var(--bodyFontSize);
+			font-weight: 400;
+			font-weight: var(--bodyFontWeight);
+			line-height: 1.5;
+			line-height: var(--bodyLineHeight);
+			margin: 0;
+			min-height: 100vh
+		}
+
+		.align {
+			display: grid;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			justify-items: center;
+			place-items: center
+		}
+
+		.grid {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 20rem
+		}
+
+		button {
+			background-image: none;
+			border: 0;
+			color: inherit;
+			font: inherit;
+			margin: 0;
+			outline: 0;
+			padding: 0;
+			cursor: pointer;
+			-webkit-transition: background-color .3s;
+			-o-transition: background-color .3s;
+			transition: background-color .3s
+		}
+
+		.form {
+			display: grid;
+			margin-top: 1rem;
+			grid-gap: .875rem;
+			gap: .875rem;
+			grid-gap: var(--formGap);
+			gap: var(--formGap)
+		}
+
+		.form button[type=button] {
+			width: 100%
+		}
+
+		.form__field {
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex
+		}
+
+		.login {
+			color: #eee;
+			color: var(--loginColor)
+		}
+
+		.login button[type=button] {
+			border-radius: .25rem;
+			border-radius: var(--loginBorderRadus);
+			padding: 1rem
+		}
+
+		a {
+			width: 100%;
+		}
+
+		.login button[type=button] {
+			background-color: #ea4c88;
+			background-color: var(--loginSubmitBackgroundColor);
+			color: #eee;
+			color: var(--loginSubmitColor);
+			font-weight: 700;
+			text-transform: uppercase
+		}
+
+		.login button[type=button]:focus,
+		.login button[type=button]:hover {
+			background-color: #d44179;
+			background-color: var(--loginSubmitHoverBackgroundColor)
+		}
+
+		.login__title {
+			font-size: 3rem;
+			text-align: center;
+			background: linear-gradient(to right bottom, var(--loginSubmitBackgroundColor), silver, var(--loginSubmitHoverBackgroundColor));
+			background-clip: text;
+			-webkit-text-fill-color: transparent
+		}
+	</style>
+</head>
+
+<body class="align">
+
+	<div class="grid">
+
+		<div class="login__title">Access denied</div>
+
+		<div class="form login">
+			<div class="form__field">
+				<a href="/">
+					<button type="button">Back to login</button>
+				</a>
+			</div>
+		</div>
+
+	</div>
+</body>
+
+</html>
